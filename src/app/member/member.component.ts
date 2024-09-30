@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-member',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './member.component.html',
   styleUrl: './member.component.css',
 })
-export class MemberComponent {}
+export class MemberComponent {
+  @Input({ required: true }) name!: string;
+  @Input({ required: true }) avatar!: string;
+
+  get avatarPath() {
+    return 'assets/users/' + this.avatar;
+  }
+}
