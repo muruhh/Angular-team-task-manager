@@ -12,4 +12,8 @@ import { DUMMY_USERS } from './Dummy_users';
 })
 export class AppComponent {
   user = DUMMY_USERS;
+
+  onSelect(name: string) {
+    console.log(name);
+  }
 }

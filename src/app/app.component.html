@@ -2,22 +2,46 @@
 <main>
   <ul id="users">
     <li>
-      <app-member [name]="user[0].name" [avatar]="user[0].avatar" />
+      <app-member
+        [name]="user[0].name"
+        [avatar]="user[0].avatar"
+        (select)="onSelect($event)"
+      />
     </li>
     <li>
-      <app-member [name]="user[1].name" [avatar]="user[1].avatar" />
+      <app-member
+        [name]="user[1].name"
+        [avatar]="user[1].avatar"
+        (select)="onSelect($event)"
+      />
     </li>
     <li>
-      <app-member [name]="user[2].name" [avatar]="user[2].avatar" />
+      <app-member
+        [name]="user[2].name"
+        [avatar]="user[2].avatar"
+        (select)="onSelect($event)"
+      />
     </li>
     <li>
-      <app-member [name]="user[3].name" [avatar]="user[3].avatar" />
+      <app-member
+        [name]="user[3].name"
+        [avatar]="user[3].avatar"
+        (select)="onSelect($event)"
+      />
     </li>
     <li>
-      <app-member [name]="user[4].name" [avatar]="user[4].avatar" />
+      <app-member
+        [name]="user[4].name"
+        [avatar]="user[4].avatar"
+        (select)="onSelect($event)"
+      />
     </li>
     <li>
-      <app-member [name]="user[5].name" [avatar]="user[5].avatar" />
+      <app-member
+        [name]="user[5].name"
+        [avatar]="user[5].avatar"
+        (select)="onSelect($event)"
+      />
     </li>
   </ul>
 </main>
