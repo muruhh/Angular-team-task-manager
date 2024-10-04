@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { MemberComponent } from './member/member.component';
-import { DUMMY_USERS } from './Dummy_users';
 import { TasksComponent } from './tasks/tasks.component';
+import { DUMMY_USERS } from './Dummy_users';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { TasksComponent } from './tasks/tasks.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  user = DUMMY_USERS;
+  users = DUMMY_USERS;
   member: string = '';
 
   onSelect(name: string) {
