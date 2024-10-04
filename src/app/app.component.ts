@@ -12,8 +12,9 @@ import { DUMMY_USERS } from './Dummy_users';
 })
 export class AppComponent {
   user = DUMMY_USERS;
+  member: string = '';
 
   onSelect(name: string) {
-    console.log(name);
+    this.member = name;
   }
 }
