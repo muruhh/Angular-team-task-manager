@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { MemberComponent } from './member/member.component';
 import { DUMMY_USERS } from './Dummy_users';
+import { TasksComponent } from './tasks/tasks.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, MemberComponent],
+  imports: [HeaderComponent, MemberComponent, TasksComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
