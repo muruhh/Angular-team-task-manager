@@ -45,5 +45,9 @@
     </li>
   </ul>
 
-  <app-tasks />
+  @if(member){
+  <app-tasks [member]="member" />
+  } @else{
+  <h2>Select a member to display tasks!</h2>
+  }
 </main>
