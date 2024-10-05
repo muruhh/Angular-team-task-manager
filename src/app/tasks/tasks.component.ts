@@ -29,4 +29,8 @@ export class TasksComponent {
   openNewTaskForm() {
     this.openForm = true;
   }
+
+  closeNewTaskForm() {
+    this.openForm = false;
+  }
 }

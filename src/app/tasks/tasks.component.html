@@ -16,5 +16,5 @@
 </div>
 
 @if (openForm) {
-<app-new-task />
+<app-new-task (closeDialog)="closeNewTaskForm()" />
 }
