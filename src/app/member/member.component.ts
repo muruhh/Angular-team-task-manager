@@ -1,5 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+interface User {
+  id: number;
+  name: string;
+  avatar: string;
+}
+
 @Component({
   selector: 'app-member',
   standalone: true,
@@ -8,15 +14,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './member.component.css',
 })
 export class MemberComponent {
-  @Input({ required: true }) name!: string;
-  @Input({ required: true }) avatar!: string;
+  @Input({ required: true }) user!: User;
   @Output() select = new EventEmitter();
 
   get avatarPath() {
-    return 'assets/users/' + this.avatar;
+    return 'assets/users/' + this.user.avatar;
   }
 
   onClick() {
-    this.select.emit(this.name);
+    this.select.emit(this.user.id);
   }
 }
