@@ -4,6 +4,12 @@ import { MemberComponent } from './member/member.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { DUMMY_USERS } from './Dummy_users';
 
+interface User {
+  id: number;
+  name: string;
+  avatar: string;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,11 +19,9 @@ import { DUMMY_USERS } from './Dummy_users';
 })
 export class AppComponent {
   users = DUMMY_USERS;
+  selectedMember: User | null = null;
 
-  selectedMember: number = 0;
-
-  onSelect(id: number) {
-    this.selectedMember = id;
-    console.log(this.selectedMember);
+  onSelect(user: User) {
+    this.selectedMember = user;
   }
 }

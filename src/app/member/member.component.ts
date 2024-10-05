@@ -22,6 +22,6 @@ export class MemberComponent {
   }
 
   onClick() {
-    this.select.emit(this.user.id);
+    this.select.emit(this.user);
   }
 }
