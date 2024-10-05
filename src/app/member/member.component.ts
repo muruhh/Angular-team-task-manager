@@ -15,6 +15,7 @@ interface User {
 })
 export class MemberComponent {
   @Input({ required: true }) user!: User;
+  @Input({ required: true }) selected!: User;
   @Output() select = new EventEmitter();
 
   get avatarPath() {

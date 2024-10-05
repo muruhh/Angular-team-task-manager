@@ -19,7 +19,7 @@ interface User {
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  selectedMember: User | null = null;
+  selectedMember: User = { id: 0, name: '', avatar: '' };
 
   onSelect(user: User) {
     this.selectedMember = user;
