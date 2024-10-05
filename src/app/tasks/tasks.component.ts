@@ -19,8 +19,4 @@ export class TasksComponent {
   @Input({ required: true }) selectedMember!: User;
 
   tasks = DUMMY_TASKS;
-
-  getTasks() {
-    // return this.member.filter();
-  }
 }
