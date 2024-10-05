@@ -19,4 +19,8 @@ export class TasksComponent {
   @Input({ required: true }) selectedMember!: User;
 
   tasks = DUMMY_TASKS;
+
+  get selectedTasks() {
+    return this.tasks.filter((task) => task.userId === this.selectedMember.id);
+  }
 }
