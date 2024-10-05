@@ -51,4 +51,8 @@ export class TasksComponent {
 
     this.openForm = false;
   }
+
+  markAsDone(id: string) {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
+  }
 }
