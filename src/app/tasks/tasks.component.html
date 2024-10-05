@@ -2,7 +2,7 @@
   <header>
     <h2>{{ selectedMember.name }}</h2>
     <menu>
-      <button>Add Task</button>
+      <button (click)="openNewTaskForm()">Add Task</button>
     </menu>
   </header>
 
@@ -14,3 +14,7 @@
     }
   </ul>
 </div>
+
+@if (openForm) {
+<app-new-task />
+}
