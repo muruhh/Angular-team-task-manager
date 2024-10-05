@@ -16,5 +16,8 @@
 </div>
 
 @if (openForm) {
-<app-new-task (closeDialog)="closeNewTaskForm()" />
+<app-new-task
+  (closeDialog)="closeNewTaskForm()"
+  (addNewTask)="onAddNewTask($event)"
+/>
 }

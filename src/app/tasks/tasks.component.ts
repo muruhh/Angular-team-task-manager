@@ -9,6 +9,12 @@ interface User {
   avatar: string;
 }
 
+interface NewTask {
+  title: string;
+  summary: string;
+  dueDate: string;
+}
+
 @Component({
   selector: 'app-tasks',
   standalone: true,
@@ -31,6 +37,18 @@ export class TasksComponent {
   }
 
   closeNewTaskForm() {
+    this.openForm = false;
+  }
+
+  onAddNewTask(newTask: NewTask) {
+    this.tasks.unshift({
+      id: new Date().getTime().toString(),
+      userId: this.selectedMember.id,
+      title: newTask.title,
+      summary: newTask.summary,
+      dueDate: newTask.dueDate,
+    });
+
     this.openForm = false;
   }
 }
